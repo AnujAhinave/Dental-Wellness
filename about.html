@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About The Stylist | Sufiyan Hair Studio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+        
+        html { scroll-behavior: smooth; font-family: 'Inter', sans-serif; }
+        
+        .luxury-font { font-family: 'Playfair Display', serif; }
+        
+        :root {
+            --bg-light: #F9F9F9;
+            --text-main: #222222;
+            --accent-gold: #B8977E; 
+        }
+
+        body { background-color: var(--bg-light); color: var(--text-main); }
+
+        .gradient-text { background: linear-gradient(90deg, #B8977E, #8A6D55); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Subtle Background Pattern */
+        .bg-pattern { 
+            background-color: #ffffff;
+            background-image: radial-gradient(#B8977E 0.5px, transparent 0.5px);
+            background-size: 20px 20px;
+            opacity: 0.05;
+        }
+
+        .hover-scale { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .hover-scale:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); border-color: var(--accent-gold); }
+
+        /* Custom Logo Sizing */
+        .zoom-centre-logo { overflow: hidden; background-color: white; border: 1px solid #eee; }
+        .zoom-centre-logo img {
+            object-fit: cover; 
+            object-position: center;
+            transform: scale(1.9); 
+            width: 100%; height: 100%;
+        }
+
+        /* Mobile Menu Fix */
+        #mobile-menu { 
+            display: none; 
+        }
+        #mobile-menu.active { 
+            display: block !important; 
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <nav class="bg-white/95 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between relative">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-4">
+                    <div class="w-10 h-10 rounded-full zoom-centre-logo shadow-sm">
+                        <img src="https://raw.githubusercontent.com/AnujAhinave/hair-salon-/main/images%20(1).png" alt="Sufiyan Studio Logo">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-extrabold text-xl tracking-tight uppercase text-gray-900 leading-none">
+                            Sufiyan <span class="text-[#B8977E]">Studio</span>
+                        </span>
+                        <span class="text-[9px] font-bold tracking-[0.3em] text-gray-400 uppercase mt-1">Kalyan West</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="hidden lg:flex items-center gap-8 text-[11px] font-bold uppercase tracking-widest text-gray-500">
+                <a href="index.html" class="hover:text-[#B8977E] transition-colors">Home</a>
+                <a href="#" class="text-[#B8977E] border-b-2 border-[#B8977E] pb-1">About Stylist</a>
+                <a href="treatments.html" class="hover:text-[#B8977E] transition-colors">Services</a>
+                <a href="results.html" class="hover:text-[#B8977E] transition-colors">Reviews</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="tel:9699496170" class="hidden sm:flex items-center gap-2 border-2 border-gray-900 text-gray-900 px-6 py-2 rounded-md font-bold hover:bg-gray-50 transition text-xs uppercase tracking-widest">
+                    <i class="fas fa-phone-alt"></i> Call
+                </a>
+                <a href="index.html#booking" class="bg-gray-900 text-white px-7 py-2.5 rounded-md font-bold hover:bg-[#B8977E] shadow-lg text-xs transition-all text-center uppercase tracking-widest hidden md:block">
+                    Book Now
+                </a>
+                <button id="menu-btn" class="lg:hidden text-gray-900 focus:outline-none p-2 bg-gray-50 rounded-md">
+                    <i class="fas fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="absolute top-20 right-6 w-48 bg-white border border-gray-100 rounded-xl shadow-2xl p-2 z-[60]">
+                <div class="flex flex-col text-[11px] font-bold uppercase tracking-widest text-gray-600">
+                    <a href="index.html" class="hover:bg-gray-50 text-gray-600 p-3 rounded-lg flex items-center gap-3">
+                        <i class="fas fa-home w-4"></i> Home
+                    </a>
+                    <a href="about.html" class="hover:bg-gray-50 text-[#B8977E] p-3 rounded-lg flex items-center gap-3">
+                        <i class="fas fa-cut w-4"></i> About
+                    </a>
+                    <a href="treatments.html" class="hover:bg-gray-50 hover:text-[#B8977E] p-3 rounded-lg flex items-center gap-3">
+                        <i class="fas fa-list w-4"></i> Services
+                    </a>
+                    <a href="results.html" class="hover:bg-gray-50 hover:text-[#B8977E] p-3 rounded-lg flex items-center gap-3">
+                        <i class="fas fa-star w-4"></i> Stories
+                    </a>
+                    <div class="h-[1px] bg-gray-100 my-1"></div>
+                    <a href="index.html#booking" class="text-[#B8977E] p-3 flex items-center gap-3">
+                        <i class="fas fa-calendar-check w-4"></i> Book Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-20 bg-white relative overflow-hidden border-b border-gray-100">
+        <div class="absolute inset-0 bg-pattern"></div>
+        <div class="max-w-6xl mx-auto px-6 relative flex flex-col md:flex-row items-center gap-16">
+            
+            <div class="md:w-1/2">
+                <div class="relative inline-block w-full max-w-md mx-auto">
+                    <img src="https://raw.githubusercontent.com/AnujAhinave/hair-salon-/main/Screenshot%20From%202026-03-13%2008-00-59.png" 
+                         class="rounded-3xl shadow-2xl border-8 border-white relative z-10 w-full h-[500px] object-cover" alt="Master Stylist Sufiyan at Work">
+                    
+                    <div class="absolute -bottom-6 -right-6 md:-right-10 bg-[#111111] text-white p-8 rounded-2xl shadow-xl z-20 border border-gray-800">
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-star text-[#B8977E] text-4xl"></i>
+                            <div>
+                                <p class="text-3xl font-extrabold">4.9/5</p>
+                                <p class="text-[10px] uppercase font-bold tracking-[0.2em] text-gray-400">Top Rated Stylist</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 text-center md:text-left">
+                <span class="text-[#B8977E] font-bold uppercase tracking-widest text-xs">Master Stylist & Founder</span>
+                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mt-4 leading-tight tracking-tight luxury-font">
+                    Meet <span class="gradient-text italic">Sufiyan</span>
+                </h1>
+                
+                <p class="text-lg text-gray-600 mt-8 leading-relaxed font-light">
+                    As the creative force behind Sufiyan Hair Studio in Kalyan West, Sufiyan brings unmatched passion, artistic vision, and technical precision to every single client who sits in his chair.
+                </p>
+                <p class="text-lg text-gray-600 mt-4 leading-relaxed font-light">
+                    Specializing in razor-sharp skin fades, structural scissor cuts, and transformative color treatments, his philosophy is simple: a great hairstyle is the ultimate foundation of a person's confidence. He doesn't just cut hair; he engineers a look tailored specifically to your face shape and lifestyle.
+                </p>
+
+                <div class="grid grid-cols-3 gap-4 mt-10 border-t border-gray-200 pt-8">
+                    <div>
+                        <h4 class="text-3xl font-extrabold text-gray-900">5k+</h4>
+                        <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mt-1">Signature Cuts</p>
+                    </div>
+                    <div>
+                        <h4 class="text-3xl font-extrabold text-gray-900">8+</h4>
+                        <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mt-1">Years Crafting</p>
+                    </div>
+                    <div>
+                        <h4 class="text-3xl font-extrabold text-[#B8977E]">100%</h4>
+                        <p class="text-[10px] text-gray-500 uppercase tracking-widest font-bold mt-1">Commitment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#F9F9F9]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-gray-900 uppercase tracking-tight luxury-font">The Stylist Advantage</h2>
+                <p class="text-gray-500 mt-2 text-sm">Why clients keep coming back</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover-scale flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-gray-50 text-[#B8977E] rounded-full flex items-center justify-center text-2xl mb-6 shadow-inner border border-gray-100">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 uppercase tracking-tight">Precision Geometry</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Mastering the angles of the head. Every cut is mathematically planned to grow out beautifully and remain easy to style at home.</p>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover-scale flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-gray-50 text-[#B8977E] rounded-full flex items-center justify-center text-2xl mb-6 shadow-inner border border-gray-100">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 uppercase tracking-tight">Personalized Vision</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">No two clients are the same. Sufiyan takes the time to consult, listen, and recommend the exact style that elevates your unique features.</p>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover-scale flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-gray-50 text-[#B8977E] rounded-full flex items-center justify-center text-2xl mb-6 shadow-inner border border-gray-100">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 uppercase tracking-tight">Trusted Authority</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Built on a foundation of hygiene, authentic premium products, and a deep respect for the craft of professional barbering and cosmetology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#111111] text-white text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&q=80&w=1200')] opacity-[0.03] bg-cover bg-center"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-8 uppercase tracking-tight leading-tight luxury-font">
+                Ready for Your <br><span class="text-[#B8977E] italic">Transformation?</span>
+            </h2>
+            <p class="text-gray-400 mb-10">Experience the difference of a true master stylist in Kalyan West.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="index.html#booking" class="bg-[#B8977E] text-white px-12 py-4 rounded-md font-bold hover:bg-white hover:text-black transition-colors uppercase text-sm tracking-widest shadow-lg">
+                    Reserve Your Chair
+                </a>
+                <a href="https://www.instagram.com/sufi1602" target="_blank" class="border-2 border-white/20 text-white px-12 py-4 rounded-md font-bold hover:bg-white/10 transition-colors uppercase text-sm tracking-widest flex items-center justify-center gap-2">
+                    <i class="fab fa-instagram"></i> See More Work
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black text-gray-400 py-12 border-t border-white/10 text-center">
+        <span class="font-extrabold text-lg tracking-tighter uppercase text-white luxury-font">Sufiyan <span class="text-[#B8977E] italic">Studio</span></span>
+        <p class="text-gray-500 text-[10px] uppercase tracking-[0.3em] mt-3">© 2026 Sufiyan Hair Studio | Kalyan West</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.toggle('active');
+            if (mobileMenu.classList.contains('active')) {
+                menuIcon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                menuIcon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+                menuIcon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>
